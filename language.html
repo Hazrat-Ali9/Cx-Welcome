@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="" />
+    <link
+      href="#/assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <link
+      href="datatable/datatables.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="datatable/datatables.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="datatable/pdfmake.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="datatable/vfs_fonts.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="css/admin.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar Holder -->
+      <nav id="sidebar" class="sidebar">
+        <div class="position-fixed scroll-y">
+          <div class="sidebar-header">Admin Dashboard </div>
+          <ul class="list-unstyled mt-2">
+            <li>
+              <a
+                class="active"
+                href="#"
+              >
+                
+            </li>
+
+            <li class="text mt-4 text-uppercase">Player</li>
+            <li>
+              <a
+                href="#/player"
+              >
+                <i class="fa-thin fa-users me-2"></i> Player List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Deposit</li>
+            <li>
+              <a
+                href="#/deposit/index.html"
+              >
+                <i class="fa-thin fa-square-arrow-down me-2"></i> All Deposit
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/deposit/pending.html"
+              >
+                <i class="fa-thin fa-coins me-2"></i> Pending Deposit
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Withdraw</li>
+            <li>
+              <a
+                href="#/withdraw/index.html"
+              >
+                <i class="fa-thin fa-square-arrow-up me-2"></i> All Withdraw
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/withdraw/pending.html"
+              >
+                <i class="fa-thin fa-coins me-2"></i> Pending Withdraw
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Bets</li>
+            <li>
+              <a
+                href="#/bets/pending.html"
+              >
+                <i class="fa-thin fa-exchange me-2"></i> Pending Bet
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/bets/index.html"
+              >
+                <i class="fa-thin fa-list-tree me-2"></i> Bet List
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/games/index.html"
+              >
+                <i class="fa-thin fa-spade me-2"></i> Games
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Agent</li>
+            <li>
+              <a
+                href="#/agent/add.html"
+              >
+                <i class="fa-thin fa-user-plus me-2"></i> Create Agent
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/agent/index.html"
+              >
+                <i class="fa-thin fa-users me-2"></i> Agent List
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/agent/prepayment.html"
+              >
+                <i class="fa-thin fa-square-arrow-down me-2"></i> Pre Payment
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/agent/commission.html"
+              >
+                <i class="fa-thin fa-line-chart me-2"></i> Commission
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Payment Method</li>
+            <li>
+              <a
+                href="#/payments/add.html"
+              >
+                <i class="fa-thin fa-plus me-2"></i> Create Payment
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/payments/index.html"
+              >
+                <i class="fa-thin fa-flag-pennant me-2"></i> Payments List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Affiliate</li>
+            <li>
+              <a
+                href="#/affiliate/index.html"
+              >
+                <i class="fa-thin fa-handshake me-2"></i> Affiliate List
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/affiliate/history.html"
+              >
+                <i class="fa-thin fa-history me-2"></i> History
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/affiliate/transfer.html"
+              >
+                <i class="fa-thin fa-chart-simple me-2"></i> Transfer
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#/affiliate/review.html"
+              >
+                <i class="fa-thin fa-refresh me-2"></i> Review
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Popular</li>
+            <li>
+              <a
+                href="#/popular/add.html"
+              >
+                <i class="fa-thin fa-plus me-2"></i> Add Popular
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/popular/index.html"
+              >
+                <i class="fa-thin fa-star me-2"></i> Popular List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Sports</li>
+            <li>
+              <a
+                href="#/sports/add.html"
+              >
+                <i class="fa-thin fa-plus me-2"></i> Add Sport
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/sports/index.html"
+              >
+                <i class="fa-thin fa-cricket-bat-ball me-2"></i> Sports List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Sliders</li>
+            <li>
+              <a
+                href="#/sliders/add.html"
+              >
+                <i class="fa-thin fa-plus me-2"></i> Add Slider
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/sliders/index.html"
+              >
+                <i class="fa-thin fa-gallery-thumbnails me-2"></i> Slider List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Blog Category</li>
+            <li>
+              <a
+                href="#/categories/add.html"
+              >
+                <i class="fa-thin fa-plus me-2"></i> Add Category
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/categories/index.html"
+              >
+                <i class="fa-thin fa-list me-2"></i> Category List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Blog & Promotion</li>
+            <li>
+              <a
+                href="#/blogs/add.html"
+              >
+                <i class="fa-thin fa-plus me-2"></i> Add Blog
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/blogs/index.html"
+              >
+                <i class="fa-thin fa-blog me-2"></i> Blog List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Sms Provider</li>
+            <li>
+              <a
+                href="#/sms/index.html"
+              >
+                <i class="fa-thin fa-comment-sms me-2"></i> Sms Provider
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Language</li>
+            <li>
+              <a
+                href="#/language/add.html"
+              >
+                <i class="fa-thin fa-plus me-2"></i> Add Language
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/language/index.html"
+              >
+                <i class="fa-thin fa-globe me-2"></i> Language List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Transactions</li>
+            <li>
+              <a
+                href="#/transaction.html"
+              >
+                <i class="fa-thin fa-chart-user me-2"></i> Transactions
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Exchange Rate</li>
+            <li>
+              <a
+                href="#/exchange/index.html"
+              >
+                <i class="fa-thin fa-check-circle me-2"></i> Exchange
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Configaration</li>
+            <li>
+              <a
+                href="#/settings/general.html"
+              >
+                <i class="fa-thin fa-folder-gear me-2"></i> General
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/settings/media.html"
+              >
+                <i class="fa-thin fa-font-awesome me-2"></i> Logo & Icon
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/settings/risk.html"
+              >
+                <i class="fa-thin fa-user-gear me-2"></i> Risk Management
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#/settings/seo.html"
+              >
+                <<i class="fa-thin fa-megaphone me-2"></i> Meta Data
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#/settings/contact.html"
+              >
+                <i class="fa-thin fa-envelope-circle-check me-2"></i> Contact
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#/settings/content.html"
+              >
+                <i class="fa-thin fa-id-card-clip me-2"></i> Content HTML
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#/settings/social.html"
+              >
+                <i class="fa-thin fa-share-from-square me-2"></i> Social
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Page Content Healder -->
+
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white rounded mb-3">
+          <button
+            type="button"
+            id="sidebarCollapse"
+            class="navbar-btn bg-white"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="nav ml-auto">
+            <div class="btn-group me-md-5 me-3">
+              <a
+                href="#"
+                id="dropdownInfo"
+                data-toggle="dropdown"
+                aria-haspopup="false"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-bell"></i>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right"
+                aria-labelledby="dropdownInfo"
+              >
+                <center>No Data Found</center>
+              </div>
+            </div>
+
+            <a
+              class="me-3"
+              href="https://scriptsellshop.com/"
+              title="Logout"
+            >
+              <i class="fa-regular fa-arrow-right-from-bracket"></i>
+            </a>
+          </div>
+        </nav>
+
+        <div class="container">
+          <title>Add Language</title>
+
+          <div class="mb-3 page-header">
+            <a
+              href="https://bet365soft.com/webapp/sportsbook/admin/dashboard"
+              class="me-1"
+              >Dashboard</a
+            >
+            |
+            <a
+              href="https://bet365soft.com/webapp/sportsbook/admin/language/index"
+              class="mx-1"
+              >Language List</a
+            >
+            | <span class="ms-1">Add Language</span>
+          </div>
+
+          <div class="alert alert-danger my-3">
+            You cannot add this information because it is a demo application
+          </div>
+          <p class="p-3 alert alert-warning">
+            Must be only one By Default option [Yes]. Other [No]
+          </p>
+
+          <div class="col-lg-8 p-0">
+            <div id="error600" class="text-danger"></div>
+            <div class="bg-white border border-primary rounded p-3 mb-3">
+              <form method="POST" enctype="multipart/form-data" id="add">
+                <label
+                  >Upload Image (80x80)
+                  <span class="text-danger">*</span></label
+                >
+                <input
+                  type="file"
+                  name="image"
+                  class="form-control"
+                  required
+                /><br />
+
+                <label>Country <span class="text-danger">*</span></label>
+                <select name="country" class="form-control-2" required>
+                  <option value="">Select Country</option>
+                  <option value="AF">Afghanistan</option>
+                  <option value="AX">Aland Islands</option>
+                  <option value="AL">Albania</option>
+                  <option value="DZ">Algeria</option>
+                  <option value="AS">American Samoa</option>
+                  <option value="AD">Andorra</option>
+                  <option value="AO">Angola</option>
+                  <option value="AI">Anguilla</option>
+                  <option value="AQ">Antarctica</option>
+                  <option value="AG">Antigua and Barbuda</option>
+                  <option value="AR">Argentina</option>
+                  <option value="AM">Armenia</option>
+                  <option value="AW">Aruba</option>
+                  <option value="AU">Australia</option>
+                  <option value="AT">Austria</option>
+                  <option value="AZ">Azerbaijan</option>
+                  <option value="BS">Bahamas</option>
+                  <option value="BH">Bahrain</option>
+                  <option value="BD">Bangladesh</option>
+                  <option value="BB">Barbados</option>
+                  <option value="BY">Belarus</option>
+                  <option value="BE">Belgium</option>
+                  <option value="BZ">Belize</option>
+                  <option value="BJ">Benin</option>
+                  <option value="BM">Bermuda</option>
+                  <option value="BT">Bhutan</option>
+                  <option value="BO">Bolivia</option>
+                  <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                  <option value="BA">Bosnia and Herzegovina</option>
+                  <option value="BW">Botswana</option>
+                  <option value="BV">Bouvet Island</option>
+                  <option value="BR">Brazil</option>
+                  <option value="IO">British Indian Ocean Territory</option>
+                  <option value="BN">Brunei Darussalam</option>
+                  <option value="BG">Bulgaria</option>
+                  <option value="BF">Burkina Faso</option>
+                  <option value="BI">Burundi</option>
+                  <option value="KH">Cambodia</option>
+                  <option value="CM">Cameroon</option>
+                  <option value="CA">Canada</option>
+                  <option value="CV">Cape Verde</option>
+                  <option value="KY">Cayman Islands</option>
+                  <option value="CF">Central African Republic</option>
+                  <option value="TD">Chad</option>
+                  <option value="CL">Chile</option>
+                  <option value="CN">China</option>
+                  <option value="CX">Christmas Island</option>
+                  <option value="CC">Cocos (Keeling) Islands</option>
+                  <option value="CO">Colombia</option>
+                  <option value="KM">Comoros</option>
+                  <option value="CG">Congo</option>
+                  <option value="CD">
+                    Congo, Democratic Republic of the Congo
+                  </option>
+                  <option value="CK">Cook Islands</option>
+                  <option value="CR">Costa Rica</option>
+                  <option value="CI">Cote D'Ivoire</option>
+                  <option value="HR">Croatia</option>
+                  <option value="CU">Cuba</option>
+                  <option value="CW">Curacao</option>
+                  <option value="CY">Cyprus</option>
+                  <option value="CZ">Czech Republic</option>
+                  <option value="DK">Denmark</option>
+                  <option value="DJ">Djibouti</option>
+                  <option value="DM">Dominica</option>
+                  <option value="DO">Dominican Republic</option>
+                  <option value="EC">Ecuador</option>
+                  <option value="EG">Egypt</option>
+                  <option value="SV">El Salvador</option>
+                  <option value="GQ">Equatorial Guinea</option>
+                  <option value="ER">Eritrea</option>
+                  <option value="EE">Estonia</option>
+                  <option value="ET">Ethiopia</option>
+                  <option value="FK">Falkland Islands (Malvinas)</option>
+                  <option value="FO">Faroe Islands</option>
+                  <option value="FJ">Fiji</option>
+                  <option value="FI">Finland</option>
+                  <option value="FR">France</option>
+                  <option value="GF">French Guiana</option>
+                  <option value="PF">French Polynesia</option>
+                  <option value="TF">French Southern Territories</option>
+                  <option value="GA">Gabon</option>
+                  <option value="GM">Gambia</option>
+                  <option value="GE">Georgia</option>
+                  <option value="DE">Germany</option>
+                  <option value="GH">Ghana</option>
+                  <option value="GI">Gibraltar</option>
+                  <option value="GR">Greece</option>
+                  <option value="GL">Greenland</option>
+                  <option value="GD">Grenada</option>
+                  <option value="GP">Guadeloupe</option>
+                  <option value="GU">Guam</option>
+                  <option value="GT">Guatemala</option>
+                  <option value="GG">Guernsey</option>
+                  <option value="GN">Guinea</option>
+                  <option value="GW">Guinea-Bissau</option>
+                  <option value="GY">Guyana</option>
+                  <option value="HT">Haiti</option>
+                  <option value="HM">Heard Island and McDonald Islands</option>
+                  <option value="VA">Holy See (Vatican City State)</option>
+                  <option value="HN">Honduras</option>
+                  <option value="HK">Hong Kong</option>
+                  <option value="HU">Hungary</option>
+                  <option value="IS">Iceland</option>
+                  <option value="IN">India</option>
+                  <option value="ID">Indonesia</option>
+                  <option value="IR">Iran, Islamic Republic of</option>
+                  <option value="IQ">Iraq</option>
+                  <option value="IE">Ireland</option>
+                  <option value="IM">Isle of Man</option>
+                  <option value="IL">Israel</option>
+                  <option value="IT">Italy</option>
+                  <option value="JM">Jamaica</option>
+                  <option value="JP">Japan</option>
+                  <option value="JE">Jersey</option>
+                  <option value="JO">Jordan</option>
+                  <option value="KZ">Kazakhstan</option>
+                  <option value="KE">Kenya</option>
+                  <option value="KI">Kiribati</option>
+                  <option value="KP">
+                    Korea, Democratic People's Republic of
+                  </option>
+                  <option value="KR">Korea, Republic of</option>
+                  <option value="XK">Kosovo</option>
+                  <option value="KW">Kuwait</option>
+                  <option value="KG">Kyrgyzstan</option>
+                  <option value="LA">Lao People's Democratic Republic</option>
+                  <option value="LV">Latvia</option>
+                  <option value="LB">Lebanon</option>
+                  <option value="LS">Lesotho</option>
+                  <option value="LR">Liberia</option>
+                  <option value="LY">Libyan Arab Jamahiriya</option>
+                  <option value="LI">Liechtenstein</option>
+                  <option value="LT">Lithuania</option>
+                  <option value="LU">Luxembourg</option>
+                  <option value="MO">Macao</option>
+                  <option value="MK">
+                    Macedonia, the Former Yugoslav Republic of
+                  </option>
+                  <option value="MG">Madagascar</option>
+                  <option value="MW">Malawi</option>
+                  <option value="MY">Malaysia</option>
+                  <option value="MV">Maldives</option>
+                  <option value="ML">Mali</option>
+                  <option value="MT">Malta</option>
+                  <option value="MH">Marshall Islands</option>
+                  <option value="MQ">Martinique</option>
+                  <option value="MR">Mauritania</option>
+                  <option value="MU">Mauritius</option>
+                  <option value="YT">Mayotte</option>
+                  <option value="MX">Mexico</option>
+                  <option value="FM">Micronesia, Federated States of</option>
+                  <option value="MD">Moldova, Republic of</option>
+                  <option value="MC">Monaco</option>
+                  <option value="MN">Mongolia</option>
+                  <option value="ME">Montenegro</option>
+                  <option value="MS">Montserrat</option>
+                  <option value="MA">Morocco</option>
+                  <option value="MZ">Mozambique</option>
+                  <option value="MM">Myanmar</option>
+                  <option value="NA">Namibia</option>
+                  <option value="NR">Nauru</option>
+                  <option value="NP">Nepal</option>
+                  <option value="NL">Netherlands</option>
+                  <option value="AN">Netherlands Antilles</option>
+                  <option value="NC">New Caledonia</option>
+                  <option value="NZ">New Zealand</option>
+                  <option value="NI">Nicaragua</option>
+                  <option value="NE">Niger</option>
+                  <option value="NG">Nigeria</option>
+                  <option value="NU">Niue</option>
+                  <option value="NF">Norfolk Island</option>
+                  <option value="MP">Northern Mariana Islands</option>
+                  <option value="NO">Norway</option>
+                  <option value="OM">Oman</option>
+                  <option value="PK">Pakistan</option>
+                  <option value="PW">Palau</option>
+                  <option value="PS">Palestinian Territory, Occupied</option>
+                  <option value="PA">Panama</option>
+                  <option value="PG">Papua New Guinea</option>
+                  <option value="PY">Paraguay</option>
+                  <option value="PE">Peru</option>
+                  <option value="PH">Philippines</option>
+                  <option value="PN">Pitcairn</option>
+                  <option value="PL">Poland</option>
+                  <option value="PT">Portugal</option>
+                  <option value="PR">Puerto Rico</option>
+                  <option value="QA">Qatar</option>
+                  <option value="RE">Reunion</option>
+                  <option value="RO">Romania</option>
+                  <option value="RU">Russian Federation</option>
+                  <option value="RW">Rwanda</option>
+                  <option value="BL">Saint Barthelemy</option>
+                  <option value="SH">Saint Helena</option>
+                  <option value="KN">Saint Kitts and Nevis</option>
+                  <option value="LC">Saint Lucia</option>
+                  <option value="MF">Saint Martin</option>
+                  <option value="PM">Saint Pierre and Miquelon</option>
+                  <option value="VC">Saint Vincent and the Grenadines</option>
+                  <option value="WS">Samoa</option>
+                  <option value="SM">San Marino</option>
+                  <option value="ST">Sao Tome and Principe</option>
+                  <option value="SA">Saudi Arabia</option>
+                  <option value="SN">Senegal</option>
+                  <option value="RS">Serbia</option>
+                  <option value="CS">Serbia and Montenegro</option>
+                  <option value="SC">Seychelles</option>
+                  <option value="SL">Sierra Leone</option>
+                  <option value="SG">Singapore</option>
+                  <option value="SX">St Martin</option>
+                  <option value="SK">Slovakia</option>
+                  <option value="SI">Slovenia</option>
+                  <option value="SB">Solomon Islands</option>
+                  <option value="SO">Somalia</option>
+                  <option value="ZA">South Africa</option>
+                  <option value="GS">
+                    South Georgia and the South Sandwich Islands
+                  </option>
+                  <option value="SS">South Sudan</option>
+                  <option value="ES">Spain</option>
+                  <option value="LK">Sri Lanka</option>
+                  <option value="SD">Sudan</option>
+                  <option value="SR">Suriname</option>
+                  <option value="SJ">Svalbard and Jan Mayen</option>
+                  <option value="SZ">Swaziland</option>
+                  <option value="SE">Sweden</option>
+                  <option value="CH">Switzerland</option>
+                  <option value="SY">Syrian Arab Republic</option>
+                  <option value="TW">Taiwan, Province of China</option>
+                  <option value="TJ">Tajikistan</option>
+                  <option value="TZ">Tanzania, United Republic of</option>
+                  <option value="TH">Thailand</option>
+                  <option value="TL">Timor-Leste</option>
+                  <option value="TG">Togo</option>
+                  <option value="TK">Tokelau</option>
+                  <option value="TO">Tonga</option>
+                  <option value="TT">Trinidad and Tobago</option>
+                  <option value="TN">Tunisia</option>
+                  <option value="TR">Turkey</option>
+                  <option value="TM">Turkmenistan</option>
+                  <option value="TC">Turks and Caicos Islands</option>
+                  <option value="TV">Tuvalu</option>
+                  <option value="UG">Uganda</option>
+                  <option value="UA">Ukraine</option>
+                  <option value="AE">United Arab Emirates</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="US">United States</option>
+                  <option value="UM">
+                    United States Minor Outlying Islands
+                  </option>
+                  <option value="UY">Uruguay</option>
+                  <option value="UZ">Uzbekistan</option>
+                  <option value="VU">Vanuatu</option>
+                  <option value="VE">Venezuela</option>
+                  <option value="VN">Viet Nam</option>
+                  <option value="VG">Virgin Islands, British</option>
+                  <option value="VI">Virgin Islands, U.s.</option>
+                  <option value="WF">Wallis and Futuna</option>
+                  <option value="EH">Western Sahara</option>
+                  <option value="YE">Yemen</option>
+                  <option value="ZM">Zambia</option>
+                  <option value="ZW">Zimbabwe</option></select
+                ><br />
+
+                <label>Name <span class="text-danger">*</span></label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  placeholder="Name"
+                  required
+                /><br />
+
+                <label>Json Data</label>
+                <textarea
+                  name="json_data"
+                  rows="30"
+                  placeholder="Json Data"
+                  class="form-control"
+                ></textarea
+                ><br />
+
+                <label>By Default <span class="text-danger">*</span></label>
+                <select name="status" class="form-control-2" required>
+                  <option value="No" selected>No</option>
+                  <option value="Yes">Yes</option></select
+                ><br />
+
+                <input
+                  type="submit"
+                  value="Add Language"
+                  class="submit w-100"
+                />
+              </form>
+            </div>
+          </div>
+
+          <script type="text/javascript" language="javascript">
+            $(document).ready(function (e) {
+              $("#add").on("submit", function (e) {
+                e.preventDefault();
+                $.ajax({
+                  type: "POST",
+                  url: "https://bet365soft.com/webapp/sportsbook/admin/language/data?action=add",
+                  data: new FormData(this),
+                  contentType: false,
+                  cache: false,
+                  processData: false,
+                  success: function (response) {
+                    var result = JSON.parse(response);
+                    if (result.success == 200) {
+                      window.location.replace(
+                        "https://bet365soft.com/webapp/sportsbook/admin/language/index"
+                      );
+                    } else {
+                      $("#error" + result.success).html(result.data);
+                    }
+                  },
+                });
+              });
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://bet365soft.com/webapp/sportsbook/assets/js/popper.js"></script>
+    <script src="https://bet365soft.com/webapp/sportsbook/assets/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function ($) {
+        $("li").each(function () {
+          if (
+            window.location.href.indexOf($(this).find("a:first").attr("href")) >
+            -1
+          ) {
+            $(this).addClass("active").siblings().removeClass("active");
+          }
+        });
+      });
+
+      $(document).ready(function () {
+        $("#sidebarCollapse").on("click", function () {
+          $("#sidebar").toggleClass("active");
+          $(this).toggleClass("active");
+        });
+      });
+
+      $(document).ready(function () {
+        $(".formSearch").select2({ theme: "bootstrap" });
+      });
+    </script>
+  </body>
+</html>

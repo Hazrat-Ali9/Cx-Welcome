@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="" />
+    <link
+      href="css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <link
+      href="datatable/datatables.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="datatable/datatables.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="datatable/pdfmake.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="datatable/vfs_fonts.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="css/admin.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar Holder -->
+      <nav id="sidebar" class="sidebar">
+        <div class="position-fixed scroll-y">
+          <div class="sidebar-header">Admin Dashboard </div>
+          <ul class="list-unstyled mt-2">
+            <li>
+              <a
+                class="active"
+                href="#"
+              >
+                <i class="fa-thin fa-gauge me-2"></i> Developer
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Player</li>
+            <li>
+              <a
+                href="#/player"
+              >
+                <i class="fa-thin fa-users me-2"></i> Player List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Deposit</li>
+            <li>
+              <a
+                href="#/deposit/index.html"
+              >
+                <i class="fa-thin fa-square-arrow-down me-2"></i> All Deposit
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/deposit/pending.html"
+              >
+                <i class="fa-thin fa-coins me-2"></i> Pending Deposit
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Withdraw</li>
+            <li>
+              <a
+                href="#/withdraw/index.html"
+              >
+                <i class="fa-thin fa-square-arrow-up me-2"></i> All Withdraw
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/withdraw/pending.html"
+              >
+                <i class="fa-thin fa-coins me-2"></i> Pending Withdraw
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Bets</li>
+            <li>
+              <a
+                href="#/bets/pending.html"
+              >
+                <i class="fa-thin fa-exchange me-2"></i> Pending Bet
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/bets/index.html"
+              >
+                <i class="fa-thin fa-list-tree me-2"></i> Bet List
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/games/index.html"
+              >
+                <i class="fa-thin fa-spade me-2"></i> Games
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Agent</li>
+            <li>
+              <a
+                href="#/agent/add.html"
+              >
+                <i class="fa-thin fa-user-plus me-2"></i> Create Agent
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/agent/index.html"
+              >
+                <i class="fa-thin fa-users me-2"></i> Agent List
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/agent/prepayment.html"
+              >
+                <i class="fa-thin fa-square-arrow-down me-2"></i> Pre Payment
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/agent/commission.html"
+              >
+                <i class="fa-thin fa-line-chart me-2"></i> Commission
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Payment Method</li>
+            <li>
+              <a
+                href="#/payments/add.html"
+              >
+                <i class="fa-thin fa-plus me-2"></i> Create Payment
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/payments/index.html"
+              >
+                <i class="fa-thin fa-flag-pennant me-2"></i> Payments List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Affiliate</li>
+            <li>
+              <a
+                href="#/affiliate/index.html"
+              >
+                <i class="fa-thin fa-handshake me-2"></i> Affiliate List
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/affiliate/history.html"
+              >
+                <i class="fa-thin fa-history me-2"></i> History
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/affiliate/transfer.html"
+              >
+                <i class="fa-thin fa-chart-simple me-2"></i> Transfer
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#/affiliate/review.html"
+              >
+                <i class="fa-thin fa-refresh me-2"></i> Review
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Popular</li>
+            <li>
+              <a
+                href="#/popular/add.html"
+              >
+                <i class="fa-thin fa-plus me-2"></i> Add Popular
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/popular/index.html"
+              >
+                <i class="fa-thin fa-star me-2"></i> Popular List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Sports</li>
+            <li>
+              <a
+                href="#/sports/add.html"
+              >
+                <i class="fa-thin fa-plus me-2"></i> Add Sport
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/sports/index.html"
+              >
+                <i class="fa-thin fa-cricket-bat-ball me-2"></i> Sports List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Sliders</li>
+            <li>
+              <a
+                href="#/sliders/add.html"
+              >
+                <i class="fa-thin fa-plus me-2"></i> Add Slider
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/sliders/index.html"
+              >
+                <i class="fa-thin fa-gallery-thumbnails me-2"></i> Slider List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Blog Category</li>
+            <li>
+              <a
+                href="#/categories/add.html"
+              >
+                <i class="fa-thin fa-plus me-2"></i> Add Category
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/categories/index.html"
+              >
+                <i class="fa-thin fa-list me-2"></i> Category List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Blog & Promotion</li>
+            <li>
+              <a
+                href="#/blogs/add.html"
+              >
+                <i class="fa-thin fa-plus me-2"></i> Add Blog
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/blogs/index.html"
+              >
+                <i class="fa-thin fa-blog me-2"></i> Blog List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Sms Provider</li>
+            <li>
+              <a
+                href="#/sms/index.html"
+              >
+                <i class="fa-thin fa-comment-sms me-2"></i> Sms Provider
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Language</li>
+            <li>
+              <a
+                href="#/language/add.html"
+              >
+                <i class="fa-thin fa-plus me-2"></i> Add Language
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/language/index.html"
+              >
+                <i class="fa-thin fa-globe me-2"></i> Language List
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Transactions</li>
+            <li>
+              <a
+                href="#/transaction.html"
+              >
+                <i class="fa-thin fa-chart-user me-2"></i> Transactions
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Exchange Rate</li>
+            <li>
+              <a
+                href="#/exchange/index.html"
+              >
+                <i class="fa-thin fa-check-circle me-2"></i> Exchange
+              </a>
+            </li>
+
+            <li class="text mt-4 text-uppercase">Configaration</li>
+            <li>
+              <a
+                href="#/settings/general.html"
+              >
+                <i class="fa-thin fa-folder-gear me-2"></i> General
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/settings/media.html"
+              >
+                <i class="fa-thin fa-font-awesome me-2"></i> Logo & Icon
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/settings/risk.html"
+              >
+                <i class="fa-thin fa-user-gear me-2"></i> Risk Management
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#/settings/seo.html"
+              >
+                <<i class="fa-thin fa-megaphone me-2"></i> Meta Data
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#/settings/contact.html"
+              >
+                <i class="fa-thin fa-envelope-circle-check me-2"></i> Contact
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#/settings/content.html"
+              >
+                <i class="fa-thin fa-id-card-clip me-2"></i> Content HTML
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#/settings/social.html"
+              >
+                <i class="fa-thin fa-share-from-square me-2"></i> Social
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Page Content Healder -->
+
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white rounded mb-3">
+          <button
+            type="button"
+            id="sidebarCollapse"
+            class="navbar-btn bg-white"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="nav ml-auto">
+            <div class="btn-group me-md-5 me-3">
+              <a
+                href="#"
+                id="dropdownInfo"
+                data-toggle="dropdown"
+                aria-haspopup="false"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-bell"></i>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right"
+                aria-labelledby="dropdownInfo"
+              >
+                <center>No Data Found</center>
+              </div>
+            </div>
+
+            <a
+              class="me-3"
+              href="https://scriptsellshop.com/"
+              title="Logout"
+            >
+              <i class="fa-regular fa-arrow-right-from-bracket"></i>
+            </a>
+          </div>
+        </nav>
+
+        <div class="container">
+          <title>Add Category</title>
+
+          <div class="mb-3 page-header">
+            <a
+              href="https://bet365soft.com/webapp/sportsbook/admin/dashboard"
+              class="me-1"
+              >Dashboard</a
+            >
+            |
+            <a
+              href="https://bet365soft.com/webapp/sportsbook/admin/categories/index"
+              class="mx-1"
+              >Category List</a
+            >
+            | <span class="ms-1">Add Category</span>
+          </div>
+
+          <div class="alert alert-danger my-3">
+            You cannot add this information because it is a demo application
+          </div>
+          <div class="col-lg-6 p-0">
+            <div id="error600" class="text-danger"></div>
+            <div class="bg-white border border-primary rounded p-3 mb-3">
+              <form method="POST" enctype="multipart/form-data" id="add">
+                <label>Name <span class="text-danger">*</span></label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  placeholder="Name"
+                  required
+                /><br />
+
+                <label>Status <span class="text-danger">*</span></label>
+                <select name="status" class="form-control-2" required>
+                  <option value="Active">Active</option>
+                  <option value="Close">Close</option></select
+                ><br />
+
+                <input
+                  type="submit"
+                  value="Add Category"
+                  class="submit w-100"
+                />
+              </form>
+            </div>
+          </div>
+
+          <script type="text/javascript" language="javascript">
+            $(document).ready(function (e) {
+              $("#add").on("submit", function (e) {
+                e.preventDefault();
+                $.ajax({
+                  type: "POST",
+                  url: "https://bet365soft.com/webapp/sportsbook/admin/categories/data?action=add",
+                  data: new FormData(this),
+                  contentType: false,
+                  cache: false,
+                  processData: false,
+                  success: function (response) {
+                    var result = JSON.parse(response);
+                    if (result.success == 200) {
+                      window.location.replace(
+                        "https://bet365soft.com/webapp/sportsbook/admin/categories/index"
+                      );
+                    } else {
+                      $("#error" + result.success).html(result.data);
+                    }
+                  },
+                });
+              });
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://bet365soft.com/webapp/sportsbook/assets/js/popper.js"></script>
+    <script src="https://bet365soft.com/webapp/sportsbook/assets/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function ($) {
+        $("li").each(function () {
+          if (
+            window.location.href.indexOf($(this).find("a:first").attr("href")) >
+            -1
+          ) {
+            $(this).addClass("active").siblings().removeClass("active");
+          }
+        });
+      });
+
+      $(document).ready(function () {
+        $("#sidebarCollapse").on("click", function () {
+          $("#sidebar").toggleClass("active");
+          $(this).toggleClass("active");
+        });
+      });
+
+      $(document).ready(function () {
+        $(".formSearch").select2({ theme: "bootstrap" });
+      });
+    </script>
+  </body>
+</html>
