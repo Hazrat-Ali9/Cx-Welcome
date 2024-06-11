@@ -38,3 +38,5 @@ submit.addEventListener("click", function (event) {
       // ..
     });
 });
+
+// index js
